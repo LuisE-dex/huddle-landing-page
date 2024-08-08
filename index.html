@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Huddle landing page with single introductory section</title>
+</head>
+
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  /* font-family: "Poppins", sans-serif; */
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+  /* font-family: "Open Sans", sans-serif; */
+  :root{
+    --Violet: hsl(257, 40%, 49%);
+    --softMagenta: hsl(300, 69%, 71%);
+    --White: hsl(0, 0%, 100%);
+  }
+  body{
+    background-image: url(bg-mobile.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: var(--Violet);
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .container{
+    margin: 20px auto;
+    max-width: 500px;
+  }
+
+/*------section1------*/
+#logo img{
+  width: 150px;
+  height: 50px;
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+#image{
+  text-align: center;
+}
+#image img{
+  width: 300px;
+  height: 225px;
+  margin-bottom: 60px;
+}
+
+/*------section2------*/
+.section2{
+  text-align: center;
+}
+.section2 h1{
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 40px;
+  color: var(--White);
+  margin-bottom: 30px;
+}
+.section2 p{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: var(--White);
+  margin: 0 20px 25px;
+  line-height: 25px;
+  font-size: 17.5px;
+}
+.section2 button{
+  border: none;
+  width: 250px;
+  height: 50px;
+  margin-bottom: 60px;
+  border-radius: 25px;
+  background-color: var(--White);
+  color: var(--Violet);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.151);
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  transition: .3s ease-in-out;
+}
+.section2 button:hover{
+  background-color: var(--softMagenta);
+  cursor: pointer;
+  color: var(--White);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.336);
+}
+.icons{
+  font-size: 20px;
+  color: var(--White);
+}
+.icons i{
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  padding-top: 7px;
+  margin-bottom: 20px;
+  transition: .3s ease-in-out;
+  margin-right: 8px;
+}
+.icons i:hover{
+  cursor: pointer;
+  color: var(--softMagenta);
+  border-color: var(--softMagenta);
+}
+
+
+/*------- MQ-------*/
+@media screen and (min-width: 1440px) {
+  body{
+    background-image: url(bg-desktop.svg);
+    background-size: unset;
+    background-repeat: no-repeat;
+  }
+  .container{
+    max-width: none;
+    width: 1440px;
+    height: 600px;
+    display: flex;
+    margin: 100px auto;
+    position: relative;
+    left: 5px;
+  }
+  .section1{
+    width: 720px;
+  }
+  #image img{
+    width: 720px;
+    height: 500px;
+  }
+  #logo img{
+    width: 400px;
+    position: relative;
+    right: 100px;
+    top: 10px;
+  }
+  .section2{
+    width: 720px;
+    padding: 100px 20px 0;
+    text-align: left;
+  }
+  .section2 h1{
+    margin: 40px 200px 30px 20px;
+    font-size: 2.5rem;
+    line-height: 50px;
+  }
+  .section2 p{
+    font-size: 20px;
+    margin-right: 80px;
+    line-height: 30px;
+  }
+  .section2 button{
+    margin: 30px 0 0 30px;
+    width: 200px;
+  }
+  .icons{
+    position: absolute;
+    right: 40px;
+    bottom: 25px;
+  }
+  .icons i{
+    width: 50px;
+    height: 50px;
+    font-size: 27px;
+    padding: 10px 0 0 10px;
+  }
+}
+
+</style>
+
+
+
+
+<body>
+
+  <div class="container">
+    <section class="section1">
+      <div id="logo" >
+        <img src="logo.svg" alt="">
+      </div>
+      <div id="image" >
+        <img src="illustration-mockups.svg" alt="">
+      </div>
+    </section>
+
+    <section class="section2">
+      <h1>Build The Community Your Fans Will Love</h1>
+      <p>
+        Huddle re-imagines the way we build communities. You have a voice, but so does your audience.
+        Create connections with your users as you engage in genuine discussion.
+      </p>
+      <button>Register</button>
+      <div class="icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <script src="https://kit.fontawesome.com/ee0c701266.js" crossorigin="anonymous"></script>
+  </footer>
+</body>
+</html>
